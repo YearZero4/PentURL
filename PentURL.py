@@ -189,9 +189,6 @@ def first():
    {WHITE}[1]{GREEN} DICCIONARIO CON VARIAS URL
    {WHITE}[2]{GREEN} URL ESPECIFICA (1)
  """)
- url='https://www.google.com'
- print("")
- start(url)
  opc=int(input(f"{S} ---> "))
 
  if opc == 1:

@@ -88,12 +88,14 @@ def start(url):
    head=requests.get(i).headers
    if i == ssl:
     domain1=ssl.split('://')[1]
+    domain1 = domain1.split('/')[0]
     print(f"{S}{GREEN}[+]{WHITE} URL -> {GREEN}{ssl}\n{S}{GREEN}[+] {WHITE}DOMINIO -> {GREEN}{domain1}\n{S}{GREEN}[+]{WHITE} CERTICADO SSL -> {GREEN}True [HTTPS]")
     domain.append(domain1)
     url.append(ssl)
   except:
    if i == ssl_not:
     domain1=ssl_not.split('://')[1]
+    domain1 = domain1.split('/')[0]
     print(f"{S}{RED}[-]{WHITE} URL -> {GREEN}{ssl_not}\n{S}{GREEN}[+] {WHITE}DOMINIO -> {GREEN}{domain1}\n{S}{RED}[-]{WHITE} CERTIFICADO SSL ->{RED} False [HTTP]")
     domain.append(domain1)
     url.append(ssl_not)
@@ -187,7 +189,9 @@ def first():
    {WHITE}[1]{GREEN} DICCIONARIO CON VARIAS URL
    {WHITE}[2]{GREEN} URL ESPECIFICA (1)
  """)
-
+ url='https://www.google.com'
+ print("")
+ start(url)
  opc=int(input(f"{S} ---> "))
 
  if opc == 1:
